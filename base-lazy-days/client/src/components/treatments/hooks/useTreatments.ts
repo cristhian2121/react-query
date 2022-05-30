@@ -18,9 +18,9 @@ export function useTreatments(): Treatment[] {
   const defaultData: Treatment[] = [];
   const { data = defaultData } = useQuery(queryKeys.treatments, getTreatments, {
     staleTime: 600000,
-    cacheTime: 900000,
+    cacheTime: 50000,
     refetchOnMount: false,
-    refetchOnWindowFocus: false,
+    // refetchOnWindowFocus: false,
     refetchOnReconnect: false,
     // onError: (error) => {
     //   const title =
